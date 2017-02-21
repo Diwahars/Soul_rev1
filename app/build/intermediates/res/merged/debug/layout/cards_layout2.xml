@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="cards main container">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPaddingBottom="0dp"
+        android:layout_height="100dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp">
+
+                <ImageView
+                    android:id="@+id/imageView99"
+                    android:tag="image_tag"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/title"
+                            android:padding="1dp"
+                            android:textSize="17sp"
+                            android:textColor="#111"
+                            android:layout_weight="1"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/category"
+                            android:padding="1dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/common_plus_signin_btn_text_light_focused" />
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/uploader"
+                            android:layout_weight="1"
+                            android:padding="1dp"
+                            android:layout_marginBottom="12dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/common_plus_signin_btn_text_light_focused" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/date"
+                            android:padding="3dp"
+                            android:textSize="10sp"
+                            android:layout_gravity="right"
+                            android:textColor="@color/base" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

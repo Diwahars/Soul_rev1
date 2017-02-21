@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="bluepanther.jiljungjuk.NewTabActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Soul">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/drawerLayout">
+
+        <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/containerView">
+
+        </FrameLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        </android.support.v4.view.ViewPager>
+
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:id="@+id/shitstuff"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/drawermenu_new"
+            android:layout_marginTop="-5dp">
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="end|bottom"-->
+    <!--android:layout_margin="@dimen/fab_margin"-->
+    <!--app:srcCompat="@drawable/soul_logo"-->
+    <!--app:elevation="7dp" />-->
+
+    <com.sa90.materialarcmenu.ArcMenu
+        android:id="@+id/arcMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu_open="arc_left"
+        android:background="@color/accent"
+        android:layout_gravity="bottom|end"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:paddingLeft="10dp"
+        app:fabSize="normal"
+        app:menu_scr="@drawable/soul_logo"
+        app:layout_anchorGravity="center">
+
+        <com.sa90.materialarcmenu.ArcMenu
+            android:id="@+id/arcMenu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu_open="arc_top_right"
+            android:layout_gravity="bottom|end"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:paddingLeft="10dp"
+            app:fabSize="normal"
+            app:menu_scr="@drawable/group"
+            app:layout_anchorGravity="center">
+
+
+
+            <ImageView
+                android:id="@+id/fab1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/doc"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/picture"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/music"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/clip"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/files"
+                app:elevation="4dp" />
+
+        </com.sa90.materialarcmenu.ArcMenu>
+
+        <ImageView
+            android:id="@+id/fagroup"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:elevation="4dp" />
+
+
+        <ImageView
+            android:id="@+id/faindi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/indi"
+            app:elevation="4dp" />
+
+        <ImageView
+            android:id="@+id/faba"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:elevation="4dp" />
+
+        <com.sa90.materialarcmenu.ArcMenu
+            android:id="@+id/arcMenu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu_open="arc_top_left"
+            android:layout_gravity="bottom|end"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:paddingLeft="10dp"
+            app:fabSize="normal"
+            app:menu_scr="@drawable/indi"
+            app:layout_anchorGravity="center">
+
+
+
+            <ImageView
+                android:id="@+id/fab11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/doc"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab22"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/picture"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab33"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/music"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab44"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/clip"
+                app:elevation="4dp" />
+
+            <ImageView
+                android:id="@+id/fab55"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/files"
+                app:elevation="4dp" />
+
+        </com.sa90.materialarcmenu.ArcMenu>
+    </com.sa90.materialarcmenu.ArcMenu>
+
+</android.support.design.widget.CoordinatorLayout>
